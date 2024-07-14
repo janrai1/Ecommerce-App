@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "ecommerce rest api",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js",
-    "server":"nodemon server.js"
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "Janhavi Rai",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.4"
   }
