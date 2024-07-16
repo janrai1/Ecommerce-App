@@ -1,9 +1,24 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import colors from 'colors';
+import morgan from 'morgan';
+import connectDB from './config/db.js';
+
 dotenv.config();
+
+//databse config
+connectDB();
+
 //rest object
 const app = express();
+
+//middelwares
+
+app.use(express.json());
+app.use(morgan("dev"));
+
+
+
 //rest api
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to ecommerce app</h1>");
